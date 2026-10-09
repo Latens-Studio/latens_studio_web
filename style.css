@@ -410,6 +410,21 @@ p, h1, h2, h3, h4, h5, h6, span, a, button, li, .brand-title, .brand-subtitle, d
     margin-bottom: 1.5rem;
 }
 
+.bio-link {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.bio-link:hover,
+.bio-link:focus-visible {
+    color: var(--primary-hover);
+    text-decoration-thickness: 2px;
+}
+
 .features-list {
     display: flex;
     flex-direction: column;

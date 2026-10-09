@@ -170,14 +170,6 @@
             },
             {
               "@type": "Question",
-              "name": "¿Puedo pedirte algún diseño fuera de tu catálogo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "¡Sí! Si tienes en mente una idea propia, un boceto o un archivo 3D listo (.STL / .OBJ / .STEP), cuéntamelo por Instagram o mediante el formulario de contacto."
-              }
-            },
-            {
-              "@type": "Question",
               "name": "¿Cuánto tardas en preparar un encargo?",
               "acceptedAnswer": {
                 "@type": "Answer",
@@ -297,11 +289,11 @@
                             <h2>Quién soy y qué hago</h2>
                         </div>
                         <p class="bio-text">
-                            ¡Hola! Soy <strong>León</strong>, la persona detrás de <strong>Latens Studio</strong>. Soy un apasionado del modelado y la impresión 3D en Alicante, enfocado en crear piezas únicas con el máximo cuidado por el detalle, con recogida en mano en Alicante y envíos a toda España.
+                            ¡Hola! Me llamo <strong>León</strong>, la persona detrás de <strong>Latens Studio</strong>. Esto es un pequeño proyecto y emprendimiento que estoy realizando con la ilusión y el esfuerzo de que salga adelante. Me considero alguien perfeccionista que busca optimizar cada detalle, proporcionar la máxima calidad dentro de mis posibilidades y mantenerse en constante aprendizaje.
                             <br><br>
-                            Mi trabajo se divide en dos enfoques: por un lado, ofrezco un catálogo de productos personalizables, donde el diseño base está optimizado pero tú eliges los detalles. Por otro lado, me encanta aceptar el reto de convertir tus ideas fuera del catálogo en objetos reales y tangibles. Como sigo aprendiendo día a día en este mundo, trabajo siempre con total honestidad sobre lo que está dentro de mis posibilidades actuales.
+                            Aquí encontrarás el catálogo de los modelos que están a la venta actualmente: pueden ser modelos personalizables y visualizables en el <a href="#tab-preview" class="bio-link" data-tab-target="tab-preview" title="Ir al Previsualizador 3D">Previsualizador 3D</a> o modelos fijos. También tienes a tu disposición un <a href="#contacto" class="bio-link" data-scroll-target="contactForm" title="Ir al Formulario de Contacto">Formulario</a> para contactarme por correo sobre quejas, sugerencias o cualquier otra consulta, y un apartado de <a href="#tab-faq" class="bio-link" data-tab-target="tab-faq" title="Ir a Preguntas Frecuentes">Preguntas Frecuentes (FAQ)</a> donde explico cómo se encarga, el material utilizado y más detalles.
                             <br><br>
-                            Cada pieza que sale de mi estudio está fabricada y revisada con la intención de ofrecerte la máxima calidad. Me considero un perfeccionista en constante aprendizaje, y en el futuro planeo lanzar diseños propios fijos. ¡Gracias por apoyar este proyecto local!
+                            ¡Muchas gracias por apoyar este proyecto!
                         </p>
                         <div class="features-list">
                             <div class="feature-item">
@@ -319,10 +311,10 @@
                                 </div>
                             </div>
                             <div class="feature-item">
-                                <span class="feature-icon">💡</span>
+                                <span class="feature-icon">✨</span>
                                 <div>
-                                    <strong>Diseño 3D a Medida</strong>
-                                    <p>Modelado 3D adaptado a tus ideas, desde el concepto hasta la pieza final en PLA+ ecológico.</p>
+                                    <strong>Acabados de Alta Precisión</strong>
+                                    <p>Impresión cuidada al detalle en PLA+ ecológico, con contrastes de color nítidos y máxima durabilidad.</p>
                                 </div>
                             </div>
                         </div>
@@ -387,8 +379,8 @@
                         <!-- Formulario de Contacto (integrado en la tarjeta) -->
                         <div class="social-form-section">
                             <div class="social-secondary-heading">Contacto directo</div>
-                            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-heading); margin-bottom: 0.5rem;">¿Tienes una idea o quieres dar Feedback?</h3>
-                            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.45;">Si quieres proponer un diseño nuevo fuera de catálogo o imprimir un archivo 3D (.STL / .OBJ), cuéntamelo. Al seguir aprendiendo e investigando cada día, estudiaré tu idea con total sinceridad para ver si está dentro de mis posibilidades actuales.</p>
+                            <h3 style="font-family: var(--font-heading); font-size: 1.15rem; color: var(--text-heading); margin-bottom: 0.5rem;">¿Tienes alguna duda, sugerencia o incidencia?</h3>
+                            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.45;">Escríbeme para hacerme llegar sugerencias de mejora para la web o el catálogo, resolver dudas generales o comunicar cualquier incidencia con un pedido recibido.</p>
                             <form id="contactForm" class="custom-form" style="margin-top: 0; max-width: 100%;">
                                 <!-- Honeypot anti-spam -->
                                 <div style="display: none !important; position: absolute; left: -9999px;" aria-hidden="true">
@@ -398,8 +390,9 @@
                                 <div class="form-group">
                                     <label for="formSubject" class="sr-only">Tipo de Asunto</label>
                                     <select name="asunto" id="formSubject" class="form-input" style="cursor: pointer;">
-                                        <option value="idea">💡 Idea o pedido personalizado</option>
-                                        <option value="feedback">🗣️ Feedback o sugerencias</option>
+                                        <option value="sugerencia">💡 Sugerencia o idea para el catálogo / web</option>
+                                        <option value="incidencia">⚠️ Queja o incidencia con un pedido</option>
+                                        <option value="otro">❓ Consulta general u otro asunto</option>
                                     </select>
                                 </div>
 
@@ -415,8 +408,8 @@
                                 </div>
 
                                 <div class="form-group" style="position: relative;">
-                                    <label for="contactMessage" class="sr-only">Mensaje o Detalles del Encargo</label>
-                                    <textarea id="contactMessage" name="message" rows="3" maxlength="500" placeholder="Cuéntame tu idea, detalles del diseño o sugerencia..." required class="form-input"></textarea>
+                                    <label for="contactMessage" class="sr-only">Mensaje o Detalles</label>
+                                    <textarea id="contactMessage" name="message" rows="3" maxlength="500" placeholder="Cuéntame tu duda, sugerencia o detalles de la incidencia..." required class="form-input"></textarea>
                                     <div class="char-counter-wrap">
                                         <small id="contactMessageCounter" class="char-counter">0/500</small>
                                     </div>
@@ -424,15 +417,15 @@
 
                                 <div class="form-group">
                                     <label for="attachment" class="file-label">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
-                                        <span id="fileNameDisplay">Adjuntar archivo 3D o foto (Opcional)</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                                        <span id="fileNameDisplay">Adjuntar foto o captura (Opcional)</span>
                                     </label>
-                                    <input type="file" name="attachment" id="attachment" accept=".stl,.obj,.step,.zip,.rar,.png,.jpg" class="hidden-file">
+                                    <input type="file" name="attachment" id="attachment" accept=".png,.jpg,.jpeg,.webp" class="hidden-file">
                                 </div>
 
                                 <button type="submit" class="btn-primary w-full" data-gc-event="Contacto_Enviar">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                                    Enviar Solicitud
+                                    Enviar Mensaje
                                 </button>
 
                                 <div id="formResult" class="form-result" role="status" aria-live="polite"></div>
@@ -942,7 +935,7 @@
                                 <div class="faq-answer">
                                     <p>Los modelos del catálogo se encargan <strong>exclusivamente por Mensaje Directo en Instagram (<a href="https://www.instagram.com/latens.studio?igsh=ZmIwaXVvYmJta2lt" target="_blank" rel="noopener noreferrer">@latens.studio</a>)</strong>. Esta página web es meramente informativa, de contacto y de previsualización 3D.</p>
                                     <p>Puedes encargarme tu pedido hablándome directamente por Instagram o, si utilizas el <strong>Previsualizador 3D</strong>, pulsando en <strong>"Copiar resumen para Instagram"</strong> y pegando la configuración generada directamente en nuestro chat de MD. Una vez confirmado el diseño, el pago se realiza mediante <strong>Bizum</strong> para iniciar la fabricación y coordinar la recogida en Alicante o el envío a domicilio.</p>
-                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);"><em>Nota: El formulario de la web se utiliza únicamente para contactar sobre ideas personalizadas fuera de catálogo, propuestas o feedback.</em></p>
+                                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);"><em>Nota: El formulario de la web se utiliza únicamente para dudas generales, sugerencias o incidencias con pedidos.</em></p>
                                 </div>
                             </div>
                             <div class="faq-item">
@@ -964,21 +957,12 @@
                                 </div>
                             </div>
                             <div class="faq-item">
-                                <button class="faq-question" type="button" data-gc-event="FAQ_4_Envios">
-                                    <span>¿Puedo pedirte algún diseño fuera de tu catálogo?</span>
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                                </button>
-                                <div class="faq-answer">
-                                    <p>¡Sí, por supuesto! Si tienes en mente una idea propia, un boceto o un archivo 3D listo (.STL / .OBJ / .STEP), cuéntamelo. Al estar todavía en fase de aprendizaje y perfeccionamiento constante, valoraré tu encargo con total sinceridad y te confirmaré si entra dentro de mis posibilidades actuales para realizarlo con la máxima calidad.</p>
-                                </div>
-                            </div>
-                            <div class="faq-item">
                                 <button class="faq-question" type="button" data-gc-event="FAQ_5_Tiempos">
                                     <span>¿Cuánto tardas en preparar un encargo?</span>
                                     <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </button>
                                 <div class="faq-answer">
-                                    <p>Para piezas pequeñas y modelos del catálogo, lo habitual es tener tu pedido listo el mismo día o en un plazo de 24 horas (según la demanda puntual). En proyectos personalizados más grandes o complejos el tiempo puede variar, pero mi prioridad siempre es ofrecer el plazo de entrega más corto posible manteniendo un estándar de calidad impecable.</p>
+                                    <p>Para piezas y modelos del catálogo, lo habitual es tener tu pedido listo el mismo día o en un plazo de 24 horas (según la demanda puntual). Mi prioridad siempre es ofrecer el plazo de entrega más corto posible manteniendo un estándar de calidad impecable.</p>
                                 </div>
                             </div>
                             <div class="faq-item">

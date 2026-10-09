@@ -265,6 +265,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ─── BIO IN-TEXT NAVIGATION LINKS ───
+    document.querySelectorAll('.bio-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const tabTarget = link.getAttribute('data-tab-target');
+            const scrollTarget = link.getAttribute('data-scroll-target');
+
+            if (tabTarget) {
+                switchTab(tabTarget);
+            } else if (scrollTarget) {
+                switchTab('tab-profile');
+                setTimeout(() => {
+                    const targetEl = document.getElementById(scrollTarget) || document.getElementById('contacto');
+                    if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
+        });
+    });
+
     // ─── GALLERY PREVIEW TRIGGERS ───
     const previewTriggers = document.querySelectorAll('.preview-trigger');
     const productSelect = document.getElementById('productSelect');
@@ -2454,10 +2473,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (formSubject && messageTextarea) {
         formSubject.addEventListener('change', () => {
-            if (formSubject.value === 'feedback') {
-                messageTextarea.placeholder = "¿Qué crees que podría mejorar en la web o en los productos? Te leo con atención...";
+            if (formSubject.value === 'sugerencia') {
+                messageTextarea.placeholder = "¿Qué idea o sugerencia tienes para mejorar el catálogo o la web? Te leo con atención...";
+            } else if (formSubject.value === 'incidencia') {
+                messageTextarea.placeholder = "Explícame qué problema o incidencia has tenido con tu pedido (puedes adjuntar foto abajo si es necesario)...";
             } else {
-                messageTextarea.placeholder = "Explícame tu idea, detalles del llavero o comenta el archivo que adjuntas...";
+                messageTextarea.placeholder = "Escribe aquí tu duda o consulta y te responderé lo antes posible...";
             }
         });
     }
@@ -2479,10 +2500,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (fileInput) {
         fileInput.addEventListener('change', function(e) {
-            const fileName = e.target.files[0] ? e.target.files[0].name : 'Adjuntar archivo 3D o foto (Opcional)';
+            const file = e.target.files[0];
+            const fileName = file ? file.name : 'Adjuntar foto o captura (Opcional)';
+            if (file) {
+                const ext = file.name.split('.').pop().toLowerCase();
+                const allowed = ['png', 'jpg', 'jpeg', 'webp'];
+                if (!allowed.includes(ext)) {
+                    Toast.warning('Solo se permiten imágenes (PNG, JPG, WEBP).');
+                    fileInput.value = '';
+                    if (fileNameDisplay) fileNameDisplay.textContent = 'Adjuntar foto o captura (Opcional)';
+                    if (fileLabel) fileLabel.classList.remove('has-file');
+                    return;
+                }
+            }
             if (fileNameDisplay) fileNameDisplay.textContent = fileName;
             if (fileLabel) {
-                fileLabel.classList.toggle('has-file', !!e.target.files[0]);
+                fileLabel.classList.toggle('has-file', !!file);
             }
         });
     }
